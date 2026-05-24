@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Surya Sundar — Full Stack Developer with 4+ years in Fintech & Banking. React.js, Node.js, TypeScript. Seeking UAE/Dubai opportunities." />
+  <meta property="og:title" content="Surya Sundar — Full Stack Developer" />
+  <meta property="og:description" content="4+ years building fintech & banking apps. Currently at TCS / Lloyds Bank UK. Open to UAE relocation." />
+  <meta name="theme-color" content="#0a0b0d" />
+  <title>Surya Sundar — Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <style>
+    /* ======================================================
+       DATA — edit this object to update all site content
+    ====================================================== */
+
+    /* CSS RESET & VARIABLES */
+    :root {
+      --bg: #0a0b0d;
+      --bg-card: #111318;
+      --bg-card-hover: #161a22;
+      --border: rgba(255,255,255,0.07);
+      --border-h: rgba(0,229,160,0.3);
+      --accent: #00E5A0;
+      --accent-d: rgba(0,229,160,0.13);
+      --accent-g: rgba(0,229,160,0.07);
+      --text: #f0f2f5;
+      --text2: #8892a4;
+      --text3: #4a5568;
+      --tag-bg: rgba(255,255,255,0.06);
+      --tag-b: rgba(255,255,255,0.1);
+      --ff-d: 'Syne', sans-serif;
+      --ff: 'DM Sans', sans-serif;
+      --ff-m: 'DM Mono', monospace;
+      --r: 14px;
+      --rl: 20px;
+      --t: 0.25s cubic-bezier(0.4,0,0.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--ff);
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    /* Noise + ambient */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.45;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      top: -30vh; left: 50%;
+      transform: translateX(-50%);
+      width: 80vw; height: 60vh;
+      background: radial-gradient(ellipse, rgba(0,229,160,0.04) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    #app { position: relative; z-index: 1; max-width: 1160px; margin: 0 auto; padding: 40px 24px 80px; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: rgba(0,229,160,0.3); border-radius: 4px; }
+
+    /* Shared */
+    .lbl { font-family: var(--ff-m); font-size: 10px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--text3); margin-bottom: 8px; }
+    .tag { display: inline-flex; align-items: center; padding: 4px 10px; background: var(--tag-bg); border: 1px solid var(--tag-b); border-radius: 6px; font-family: var(--ff-m); font-size: 11px; color: var(--text2); transition: var(--t); }
+    .tag:hover { border-color: var(--border-h); color: var(--accent); background: var(--accent-g); }
+    .tag.a { background: var(--accent-d); border-color: rgba(0,229,160,0.25); color: var(--accent); }
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r); transition: var(--t); }
+    .card:hover { border-color: var(--border-h); background: var(--bg-card-hover); box-shadow: 0 0 40px rgba(0,229,160,0.06); }
+
+    /* Animations */
+    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.5; transform:scale(.8); } }
+    .fade1 { animation: fadeUp .6s .05s both; }
+    .fade2 { animation: fadeUp .6s .15s both; }
+    .fade3 { animation: fadeUp .6s .25s both; }
+    .fade4 { animation: fadeUp .6s .35s both; }
+    .fade5 { animation: fadeUp .6s .45s both; }
+    .fade6 { animation: fadeUp .6s .55s both; }
+    .fade7 { animation: fadeUp .6s .65s both; }
+
+    /* ── NAV ── */
+    nav { display: flex; justify-content: space-between; align-items: center; padding-bottom: 48px; }
+    .logo { font-family: var(--ff-d); font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: -.02em; text-decoration: none; }
+    .logo span { color: var(--accent); }
+    nav ul { display: flex; gap: 32px; list-style: none; }
+    nav a { font-size: 13px; color: var(--text2); text-decoration: none; font-weight: 500; letter-spacing: .02em; transition: color var(--t); }
+    nav a:hover { color: var(--accent); }
+    .nav-cta { background: var(--accent) !important; color: #000 !important; padding: 8px 18px; border-radius: 8px; font-weight: 600 !important; }
+
+    /* ── HERO GRID ── */
+    .hgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+    /* Hero left */
+    .hleft {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--rl);
+      padding: 36px 32px 28px;
+      display: flex; flex-direction: column;
+      position: relative; overflow: hidden;
+    }
+    .hleft::before { content:''; position:absolute; bottom:-60px; right:-60px; width:200px; height:200px; background:radial-gradient(circle, rgba(0,229,160,.06), transparent 70%); pointer-events:none; }
+    .otw { display:inline-flex; align-items:center; gap:6px; padding:5px 12px; background:rgba(0,229,160,.1); border:1px solid rgba(0,229,160,.25); border-radius:20px; font-size:11px; font-weight:600; color:var(--accent); letter-spacing:.06em; text-transform:uppercase; margin-bottom:18px; align-self:flex-start; }
+    .otw::before { content:''; width:7px; height:7px; background:var(--accent); border-radius:50%; animation:pulse 2s infinite; }
+    .hname { font-family:var(--ff-d); font-size:clamp(46px,5.5vw,70px); font-weight:800; line-height:.95; letter-spacing:-.03em; margin-bottom:14px; }
+    .hname .f { color:var(--text); display:block; }
+    .hname .l { color:var(--text3); display:block; }
+    .hsub { font-size:14px; color:var(--text2); margin-bottom:20px; line-height:1.4; }
+    .htags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:24px; }
+    .hbtns { display:flex; gap:10px; margin-top:auto; margin-bottom:20px; }
+    .btn1 { flex:1; padding:12px 20px; background:var(--text); color:var(--bg); border:none; border-radius:8px; font-family:var(--ff); font-size:14px; font-weight:600; cursor:pointer; transition:var(--t); text-decoration:none; display:flex; align-items:center; justify-content:center; }
+    .btn1:hover { background:var(--accent); }
+    .btn2 { flex:1; padding:12px 20px; background:transparent; color:var(--text); border:1px solid var(--border); border-radius:8px; font-family:var(--ff); font-size:14px; font-weight:500; cursor:pointer; transition:var(--t); text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px; }
+    .btn2:hover { border-color:var(--border-h); color:var(--accent); }
+    .hstats { display:flex; gap:0; border-top:1px solid var(--border); padding-top:20px; }
+    .stat { flex:1; text-align:center; }
+    .stat+.stat { border-left:1px solid var(--border); }
+    .sv { font-family:var(--ff-d); font-size:26px; font-weight:800; color:var(--accent); line-height:1; }
+    .sl { font-size:10px; color:var(--text3); font-family:var(--ff-m); letter-spacing:.08em; text-transform:uppercase; margin-top:3px; }
+
+    /* Hero right */
+    .hright { display:flex; flex-direction:column; gap:14px; }
+    .ic { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r); padding:18px 20px; transition:var(--t); cursor:default; }
+    .ic:hover { border-color:var(--border-h); background:var(--bg-card-hover); }
+    .ic-head { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+    .ic-icon { width:32px; height:32px; border-radius:8px; background:var(--tag-bg); border:1px solid var(--tag-b); display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; }
+    .ic-title { font-size:15px; font-weight:600; color:var(--text); font-family:var(--ff-d); }
+    .ic-meta { font-family:var(--ff-m); font-size:11px; color:var(--text3); margin-top:2px; }
+    .uae { background:linear-gradient(135deg,rgba(0,229,160,.08),rgba(79,142,247,.05)); border-color:rgba(0,229,160,.2) !important; }
+    .uae-inner { display:flex; align-items:center; gap:14px; }
+    .uae-fc { width:40px; height:40px; border-radius:50%; background:rgba(0,229,160,.1); border:1px solid rgba(0,229,160,.3); display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0; }
+    .uae-t { font-family:var(--ff-d); font-size:15px; font-weight:700; color:var(--accent); }
+    .uae-s { font-size:12px; color:var(--text2); margin-top:2px; }
+    .stags { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+
+    /* ── SECTIONS ── */
+    .sec { margin-top: 48px; }
+    .sec-hd { display:flex; align-items:center; gap:14px; margin-bottom:20px; }
+    .sec-t { font-family:var(--ff-d); font-size:22px; font-weight:700; color:var(--text); letter-spacing:-.02em; }
+    .sec-line { flex:1; height:1px; background:var(--border); }
+
+    /* About */
+    .about-c { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--rl); padding:32px; }
+    .about-txt { font-size:15px; line-height:1.85; color:var(--text2); max-width:820px; }
+    .about-txt strong { color:var(--accent); font-weight:600; }
+
+    /* Skills */
+    .skills-g { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; }
+    .sk { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r); padding:20px 22px; transition:var(--t); }
+    .sk:hover { border-color:var(--border-h); background:var(--bg-card-hover); }
+    .sk-cat { font-family:var(--ff-m); font-size:10px; color:var(--accent); letter-spacing:.12em; text-transform:uppercase; margin-bottom:12px; }
+    .sk-tags { display:flex; flex-wrap:wrap; gap:6px; }
+
+    /* Experience */
+    .exp-list { display:flex; flex-direction:column; gap:16px; }
+    .exp { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--rl); padding:28px 30px; transition:var(--t); position:relative; overflow:hidden; }
+    .exp::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--accent); border-radius:3px 0 0 3px; opacity:0; transition:var(--t); }
+    .exp:hover { border-color:var(--border-h); background:var(--bg-card-hover); }
+    .exp:hover::before { opacity:1; }
+    .exp-hd { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; gap:16px; }
+    .exp-co { font-family:var(--ff-d); font-size:18px; font-weight:700; color:var(--text); letter-spacing:-.02em; }
+    .exp-role { font-size:13px; color:var(--accent); font-weight:500; font-family:var(--ff-m); margin-top:2px; }
+    .exp-meta { text-align:right; flex-shrink:0; }
+    .exp-per { font-family:var(--ff-m); font-size:11px; color:var(--text3); }
+    .exp-loc { font-size:11px; color:var(--text3); margin-top:2px; }
+    .exp-cl { display:inline-flex; align-items:center; gap:6px; padding:4px 10px; background:var(--accent-d); border:1px solid rgba(0,229,160,.2); border-radius:6px; font-size:11px; color:var(--accent); font-family:var(--ff-m); margin-bottom:14px; }
+    .exp-ul { list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:18px; }
+    .exp-ul li { padding-left:16px; position:relative; font-size:14px; color:var(--text2); line-height:1.6; }
+    .exp-ul li::before { content:'▹'; position:absolute; left:0; color:var(--accent); font-size:12px; }
+    .exp-st { display:flex; flex-wrap:wrap; gap:6px; }
+
+    /* Projects */
+    .proj-g { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:16px; }
+    .proj {
+      background:var(--bg-card); border:1px solid var(--border); border-radius:var(--rl);
+      padding:24px 26px; transition:var(--t); display:flex; flex-direction:column; gap:12px;
+      position:relative; overflow:hidden;
+    }
+    .proj:hover { border-color:var(--border-h); transform:translateY(-2px); box-shadow:0 12px 40px rgba(0,0,0,.4),0 0 40px rgba(0,229,160,.06); }
+    .proj::after { content:''; position:absolute; top:0; right:0; width:80px; height:80px; background:radial-gradient(circle at top right, var(--dc,rgba(0,229,160,.06)), transparent 70%); pointer-events:none; }
+    .proj-top { display:flex; justify-content:space-between; align-items:flex-start; }
+    .proj-dom { font-family:var(--ff-m); font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:3px 8px; border-radius:4px; font-weight:500; white-space:nowrap; }
+    .proj-title { font-family:var(--ff-d); font-size:18px; font-weight:700; color:var(--text); letter-spacing:-.02em; line-height:1.2; }
+    .proj-cl { font-size:12px; color:var(--text3); font-family:var(--ff-m); }
+    .proj-desc { font-size:13px; color:var(--text2); line-height:1.65; }
+    .proj-hl { list-style:none; display:flex; flex-direction:column; gap:5px; }
+    .proj-hl li { font-size:12px; color:var(--text2); padding-left:14px; position:relative; }
+    .proj-hl li::before { content:'—'; position:absolute; left:0; color:var(--text3); font-size:10px; }
+    .proj-st { display:flex; flex-wrap:wrap; gap:5px; margin-top:auto; padding-top:10px; border-top:1px solid var(--border); }
+    .proj-st .tag { font-size:10px; padding:3px 8px; }
+
+    /* Contact */
+    .contact {
+      margin-top:64px;
+      background:var(--bg-card); border:1px solid var(--border); border-radius:var(--rl);
+      padding:40px; text-align:center; position:relative; overflow:hidden;
+    }
+    .contact::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at center top,rgba(0,229,160,.06),transparent 60%); pointer-events:none; }
+    .contact-t { font-family:var(--ff-d); font-size:clamp(26px,4vw,38px); font-weight:800; color:var(--text); letter-spacing:-.03em; margin-bottom:8px; }
+    .contact-t span { color:var(--accent); }
+    .contact-s { font-size:15px; color:var(--text2); margin-bottom:28px; }
+    .clinks { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+    .clink { display:flex; align-items:center; gap:8px; padding:12px 22px; background:var(--tag-bg); border:1px solid var(--border); border-radius:8px; color:var(--text); text-decoration:none; font-size:14px; font-weight:500; transition:var(--t); }
+    .clink:hover { border-color:var(--border-h); background:var(--accent-d); color:var(--accent); }
+
+    /* Footer */
+    footer { margin-top:40px; padding-top:24px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; font-size:12px; color:var(--text3); font-family:var(--ff-m); }
+
+    /* Responsive */
+    @media (max-width:900px) {
+      .hgrid { grid-template-columns:1fr; }
+      .proj-g { grid-template-columns:1fr; }
+      .skills-g { grid-template-columns:1fr; }
+    }
+    @media (max-width:640px) {
+      #app { padding:24px 16px 60px; }
+      nav { padding-bottom:32px; }
+      nav ul { display:none; }
+      .hname { font-size:44px; }
+      .hleft { padding:24px 20px; }
+      .exp-hd { flex-direction:column; gap:4px; }
+      .exp-meta { text-align:left; }
+      .contact { padding:28px 20px; }
+      footer { flex-direction:column; gap:8px; text-align:center; }
+    }
+  </style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+/* ============================================================
+   PORTFOLIO DATA — edit this to update all site content
+============================================================ */
+const DATA = {
+  meta: {
+    logo: "surya.dev",
+    nav: ["About","Skills","Experience","Projects","Contact"]
+  },
+  hero: {
+    badge: "Open to Work",
+    firstName: "Surya",
+    lastName: "Sundar",
+    title: "Full Stack Developer",
+    subtitle: "Fintech & Banking · TCS / Lloyds Bank UK",
+    tags: ["React.js","Node.js","TypeScript","Redux","AWS","Docker"],
+    stats: [
+      { v:"4+", l:"Yrs Exp" },
+      { v:"5+", l:"Live Apps" },
+      { v:"30%", l:"Error Cut" },
+      { v:"2", l:"Companies" }
+    ]
+  },
+  contact: {
+    phone: "+91 75488 87650",
+    email: "suryacs4646@gmail.com",
+    linkedin: "https://linkedin.com/in/surya-sundhar"
+  },
+  cards: {
+    role:   { label:"Current Role", icon:"💼", title:"Full Stack Developer", meta:"Tata Consultancy Services · Apr 2025" },
+    client: { label:"Client", icon:"🏦", title:"Lloyds Bank Group, UK", titleColor:"#4F8EF7", meta:"Foreign currency exchange platform" },
+    stack:  { label:"Tech Stack", tags:["React","Redux","Node","TypeScript","Docker","Azure"] },
+    uae:    { flag:"🇦🇪", title:"Seeking UAE / Dubai Role", sub:"Open to visa sponsorship · Indian passport" }
+  },
+  summary: `Full Stack Developer with <strong>4+ years</strong> of experience building enterprise-grade web applications for banking, fintech, real estate, and gaming domains. Currently developing a foreign currency exchange platform for <strong>Lloyds Bank (UK)</strong> at <strong>TCS</strong> — built from scratch and used daily by bank counter staff across UK branches, reducing manual errors by <strong>30%</strong>. Deep expertise in <strong>React.js, Node.js, TypeScript</strong>, and cloud platforms (AWS, Azure). Eager to bring fintech expertise and enterprise-scale development experience to a <strong>Dubai-based technology company</strong>.`,
+  skills: [
+    { cat:"Frontend",       items:["React.js","TypeScript","JavaScript (ES6+)","Redux","HTML5","CSS3","Cancara Design Library"] },
+    { cat:"Backend",        items:["Node.js","Express.js","Nest.js","REST APIs","GraphQL","JWT","OAuth 2.0","Bcrypt","Joi Validation"] },
+    { cat:"Databases",      items:["PostgreSQL","MongoDB","SQL Server","MySQL","DynamoDB"] },
+    { cat:"Cloud & DevOps", items:["AWS (S3, DynamoDB, Lambda)","Azure","Docker","CI/CD Pipelines","Azure DevOps"] },
+    { cat:"Tools",          items:["Git (GitHub/GitLab)","Swagger","Redis","Postman","Figma","Agile/Scrum"] }
+  ],
+  experience: [
+    {
+      id:"tcs",
+      company:"Tata Consultancy Services (TCS)",
+      role:"Full Stack Developer",
+      period:"April 2025 – Present",
+      location:"Bengaluru, India",
+      client:"Lloyds Bank Group, UK",
+      highlights:[
+        "Built a foreign currency exchange web application from scratch for Lloyds Bank — used daily by bank counter staff across UK branches to process travel money transactions",
+        "Automated currency conversion and denomination selection logic — reduced manual calculation errors by 30%",
+        "Developed multi-step transaction workflows (input → summary → confirmation) using React.js, Redux, and TypeScript",
+        "Containerised deployments using Docker; maintained CI/CD pipelines via Azure DevOps",
+        "Collaborated with cross-functional teams following Agile/Scrum practices and code review processes"
+      ],
+      stack:["React.js","Redux","Node.js","TypeScript","Docker","Git","Cancara Design Library"]
+    },
+    {
+      id:"dt",
+      company:"Data Template Pvt Ltd",
+      role:"Full Stack Developer",
+      period:"February 2022 – February 2025",
+      location:"Bengaluru, India",
+      client:null,
+      highlights:[
+        "Built and enhanced 5+ production applications for international clients across real estate, healthcare, gaming, and education",
+        "Developed REST APIs, managed PostgreSQL/MongoDB databases, and deployed applications on AWS and Azure",
+        "Integrated third-party services including payment gateways, AWS Lambda, and DynamoDB",
+        "Worked directly with international stakeholders to translate business requirements into scalable technical solutions"
+      ],
+      stack:["React.js","Node.js","Express","PostgreSQL","MongoDB","AWS","Azure"]
+    }
+  ],
+  projects: [
+    {
+      id:"tm", domain:"Fintech / Banking", color:"#00E5A0",
+      title:"Travel Money Application", client:"Lloyds Bank",
+      desc:"Web-based foreign currency exchange application built from scratch for Lloyds Bank (UK). Multi-step workflow: currency/denomination selection → summary showing GBP equivalent → transaction confirmation.",
+      highlights:["Redux for centralized state management","30% reduction in manual calculation errors","Responsive accessible UI with Cancara Design Library","Containerized with Docker for consistent deployments"],
+      stack:["React.js","Redux","Node.js","TypeScript","Cancara","Docker","Git"]
+    },
+    {
+      id:"at", domain:"Real Estate", color:"#4F8EF7",
+      title:"ATTOM Cloud", client:"Real Estate Data Platform",
+      desc:"REST APIs and React frontend delivering nationwide licensed US property data on demand. Integrated SQL Server and Azure cloud services.",
+      highlights:["Nationwide US property data delivery","Sequelize ORM for high-volume data","Azure cloud infrastructure integration"],
+      stack:["React.js","Node.js","Express","TypeScript","SQL Server","Azure","Sequelize"]
+    },
+    {
+      id:"gg", domain:"Gaming / Fintech", color:"#F7A94F",
+      title:"CRG / Gorilla Games", client:"Betting & Wallet Platform",
+      desc:"USSD-based betting and digital wallet app with deposit, withdrawal, and admin game-control features.",
+      highlights:["USSD-based transaction handling","Digital wallet with deposit & withdrawal","Admin game-control dashboard"],
+      stack:["Node.js","Nest.js","Express","PostgreSQL","TypeORM","JavaScript"]
+    },
+    {
+      id:"zw", domain:"EdTech", color:"#B94FF7",
+      title:"Zamtel WhiteBoardChat", client:"E-Tutor Platform",
+      desc:"Virtual classrooms with webinar sessions and attendance tracking; integrated AWS Lambda and DynamoDB for scale.",
+      highlights:["Live virtual classroom sessions","Attendance tracking system","AWS Lambda + DynamoDB integration"],
+      stack:["React.js","JavaScript","AWS Lambda","DynamoDB"]
+    },
+    {
+      id:"fb", domain:"Social", color:"#F74F6A",
+      title:"FizaB", client:"Social Web Application",
+      desc:"Social platform from scratch supporting posts, chats, event management, and admin approval workflows.",
+      highlights:["Posts, chats, and event management","Admin approval workflows","AWS S3 & DynamoDB for media and data"],
+      stack:["React.js","JavaScript","AWS S3","DynamoDB"]
+    }
+  ]
+};
+
+/* ============================================================
+   RENDER ENGINE
+============================================================ */
+function h(tag, attrs={}, ...children) {
+  const el = document.createElement(tag);
+  for (const [k,v] of Object.entries(attrs)) {
+    if (k === 'class') el.className = v;
+    else if (k === 'html') el.innerHTML = v;
+    else if (k === 'style' && typeof v === 'object') Object.assign(el.style, v);
+    else el.setAttribute(k, v);
+  }
+  children.flat(Infinity).forEach(c => {
+    if (c == null) return;
+    el.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+  });
+  return el;
+}
+
+function Tag(text, accent=false) {
+  return h('span', {class: 'tag' + (accent?' a':'')}, text);
+}
+
+function Nav() {
+  const logo = h('a', {class:'logo', href:'#'}, DATA.meta.logo.replace('.',''), h('span', {}, '.'), 'dev');
+  const links = h('ul', {}, ...DATA.meta.nav.map((n,i) => {
+    const isCta = n==='Contact';
+    return h('li', {}, h('a', {href:`#${n.toLowerCase()}`, ...(isCta?{class:'nav-cta'}:{})}, n));
+  }));
+  return h('nav', {class:'fade1'}, logo, links);
+}
+
+function Hero() {
+  const { hero, contact, cards } = DATA;
+
+  // Stats
+  const stats = h('div', {class:'hstats'},
+    ...hero.stats.map(s => h('div', {class:'stat'},
+      h('div', {class:'sv'}, s.v),
+      h('div', {class:'sl'}, s.l)
+    ))
+  );
+
+  const left = h('div', {class:'hleft fade2'},
+    h('div', {class:'otw'}, hero.badge),
+    h('h1', {class:'hname'},
+      h('span', {class:'f'}, hero.firstName),
+      h('span', {class:'l'}, hero.lastName)
+    ),
+    h('p', {class:'hsub'}, h('strong', {style:{color:'var(--text)',fontWeight:600}}, hero.title), ' · ' + hero.subtitle),
+    h('div', {class:'htags'}, ...hero.tags.map(t => Tag(t))),
+    h('div', {class:'hbtns'},
+      h('a', {class:'btn1', href:`mailto:${contact.email}`}, 'Get In Touch'),
+      h('a', {class:'btn2', href:'#projects'}, 'View Projects ', h('span',{},'→'))
+    ),
+    stats
+  );
+
+  // Right cards
+  const roleCard = h('div', {class:'ic'},
+    h('div', {class:'lbl'}, cards.role.label),
+    h('div', {class:'ic-head'},
+      h('div', {class:'ic-icon'}, cards.role.icon),
+      h('div', {},
+        h('div', {class:'ic-title'}, cards.role.title),
+        h('div', {class:'ic-meta'}, cards.role.meta)
+      )
+    )
+  );
+
+  const clientCard = h('div', {class:'ic'},
+    h('div', {class:'lbl'}, cards.client.label),
+    h('div', {class:'ic-head'},
+      h('div', {class:'ic-icon'}, cards.client.icon),
+      h('div', {},
+        h('div', {class:'ic-title', style:{color:cards.client.titleColor}}, cards.client.title),
+        h('div', {class:'ic-meta'}, cards.client.meta)
+      )
+    )
+  );
+
+  const stackCard = h('div', {class:'ic'},
+    h('div', {class:'lbl'}, cards.stack.label),
+    h('div', {class:'stags'}, ...cards.stack.tags.map(t => Tag(t, true)))
+  );
+
+  const uaeCard = h('div', {class:'ic uae'},
+    h('div', {class:'uae-inner'},
+      h('div', {class:'uae-fc'}, cards.uae.flag),
+      h('div', {},
+        h('div', {class:'uae-t'}, cards.uae.title),
+        h('div', {class:'uae-s'}, cards.uae.sub)
+      )
+    )
+  );
+
+  const right = h('div', {class:'hright fade3'}, roleCard, clientCard, stackCard, uaeCard);
+  return h('div', {class:'hgrid'}, left, right);
+}
+
+function About() {
+  return h('section', {class:'sec fade4', id:'about'},
+    h('div', {class:'sec-hd'},
+      h('h2', {class:'sec-t'}, 'About'),
+      h('div', {class:'sec-line'})
+    ),
+    h('div', {class:'about-c'},
+      h('p', {class:'about-txt', html: DATA.summary})
+    )
+  );
+}
+
+function Skills() {
+  const cards = DATA.skills.map(s =>
+    h('div', {class:'sk'},
+      h('div', {class:'sk-cat'}, s.cat),
+      h('div', {class:'sk-tags'}, ...s.items.map(i => Tag(i)))
+    )
+  );
+  return h('section', {class:'sec fade4', id:'skills'},
+    h('div', {class:'sec-hd'},
+      h('h2', {class:'sec-t'}, 'Technical Skills'),
+      h('div', {class:'sec-line'})
+    ),
+    h('div', {class:'skills-g'}, ...cards)
+  );
+}
+
+function Experience() {
+  const cards = DATA.experience.map(e => {
+    const card = h('div', {class:'exp'},
+      h('div', {class:'exp-hd'},
+        h('div', {},
+          h('div', {class:'exp-co'}, e.company),
+          h('div', {class:'exp-role'}, e.role)
+        ),
+        h('div', {class:'exp-meta'},
+          h('div', {class:'exp-per'}, e.period),
+          h('div', {class:'exp-loc'}, e.location)
+        )
+      )
+    );
+    if (e.client) card.appendChild(h('div', {class:'exp-cl'}, '🏦 Client: ' + e.client));
+    card.appendChild(h('ul', {class:'exp-ul'}, ...e.highlights.map(hl => h('li', {}, hl))));
+    card.appendChild(h('div', {class:'exp-st'}, ...e.stack.map(s => Tag(s))));
+    return card;
+  });
+
+  return h('section', {class:'sec fade5', id:'experience'},
+    h('div', {class:'sec-hd'},
+      h('h2', {class:'sec-t'}, 'Experience'),
+      h('div', {class:'sec-line'})
+    ),
+    h('div', {class:'exp-list'}, ...cards)
+  );
+}
+
+function Projects() {
+  const cards = DATA.projects.map(p => {
+    const card = h('div', {class:'proj', style:{'--dc': p.color+'18'}});
+    const domBadge = h('span', {
+      class:'proj-dom',
+      style:{ color:p.color, background:p.color+'18', border:`1px solid ${p.color}30` }
+    }, p.domain);
+    card.appendChild(h('div', {class:'proj-top'},
+      h('div', {},
+        h('div', {class:'proj-title'}, p.title),
+        h('div', {class:'proj-cl'}, p.client)
+      ),
+      domBadge
+    ));
+    card.appendChild(h('p', {class:'proj-desc'}, p.desc));
+    card.appendChild(h('ul', {class:'proj-hl'}, ...p.highlights.map(hl => h('li',{},hl))));
+    card.appendChild(h('div', {class:'proj-st'}, ...p.stack.map(s => Tag(s))));
+    return card;
+  });
+
+  return h('section', {class:'sec fade6', id:'projects'},
+    h('div', {class:'sec-hd'},
+      h('h2', {class:'sec-t'}, 'Key Projects'),
+      h('div', {class:'sec-line'})
+    ),
+    h('div', {class:'proj-g'}, ...cards)
+  );
+}
+
+function ContactSection() {
+  const { contact } = DATA;
+  const svgEmail = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`;
+  const svgPhone = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.9 2 2 0 0 1 3.58 2.72h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`;
+  const svgLI = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>`;
+
+  const emailLink = h('a', {class:'clink', href:`mailto:${contact.email}`});
+  emailLink.innerHTML = svgEmail + contact.email;
+
+  const phoneLink = h('a', {class:'clink', href:`tel:${contact.phone.replace(/\s/g,'')}`});
+  phoneLink.innerHTML = svgPhone + contact.phone;
+
+  const liLink = h('a', {class:'clink', href:contact.linkedin, target:'_blank', rel:'noopener noreferrer'});
+  liLink.innerHTML = svgLI + 'LinkedIn';
+
+  return h('section', {class:'contact fade7', id:'contact'},
+    h('h2', {class:'contact-t', html:'Let\'s <span>Work Together</span>'}),
+    h('p', {class:'contact-s'}, 'Available for UAE / Dubai opportunities · Open to visa sponsorship & relocation'),
+    h('div', {class:'clinks'}, emailLink, phoneLink, liLink)
+  );
+}
+
+function Footer() {
+  return h('footer', {},
+    h('span', {}, '© 2025 Surya Sundar · Built with Vite + React'),
+    h('span', {}, 'Bengaluru, India · Open to UAE 🇦🇪')
+  );
+}
+
+// Mount
+const app = document.getElementById('app');
+[Nav(), Hero(), About(), Skills(), Experience(), Projects(), ContactSection(), Footer()]
+  .forEach(el => app.appendChild(el));
+
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.sec, .contact').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = 'opacity .6s ease, transform .6s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
