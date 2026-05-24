@@ -17,7 +17,7 @@ function Nav() {
 }
 
 function Hero() {
-  const { hero, contact, uaeBadge, currentRole, client, techStack } = data
+  const { hero, contact, uaeBadge, currentRole, client, frontEnd, backEnd, database} = data
 
   return (
     <div className="hero-grid">
@@ -31,9 +31,12 @@ function Hero() {
         </h1>
 
         <p className="hero-subtitle">
-          <strong style={{ color: 'var(--text-primary)', fontWeight: 600 }}>{hero.title}</strong>
-          {' · '}{hero.subtitle}
+          <strong style={{ color: 'var(--text-primary)', fontWeight: 600 }}>{hero.title}</strong>{" "}
+          {/* {' · '} */}
+          {hero.subtitle}
         </p>
+
+         <p class="hero-desc">{hero.summary}</p>
 
         <div className="hero-tags">
           {hero.tags.map(t => <span key={t} className="tag">{t}</span>)}
@@ -84,10 +87,30 @@ function Hero() {
 
         {/* Tech Stack */}
         <div className="info-card">
-          <div className="section-label">{techStack.label}</div>
-          <div className="stack-tags">
-            {techStack.tags.map(t => <span key={t} className="tag accent">{t}</span>)}
+          <div className='skills-list'> 
+            <div className="section-label">{frontEnd.label}</div>
+            <div className="stack-tags">
+              {frontEnd.tags.map(t => <span key={t} className="tag accent">{t}</span>)}
+            </div>
           </div>
+          <div className='skills-list'> 
+            <div className="section-label">{backEnd.label}</div>
+            <div className="stack-tags">
+              {backEnd.tags.map(t => <span key={t} className="tag accent">{t}</span>)}
+            </div>
+          </div>
+          <div className='skills-list'> 
+            <div className="section-label">{database.label}</div>
+            <div className="stack-tags">
+              {database.tags.map(t => <span key={t} className="tag accent">{t}</span>)}
+            </div>
+          </div>
+          {/* <div className='skills-list'> 
+            <div className="section-label">{backEnd.label}</div>
+            <div className="stack-tags">
+              {backEnd.tags.map(t => <span key={t} className="tag accent">{t}</span>)}
+            </div>
+          </div> */}
         </div>
 
         {/* UAE Badge */}
