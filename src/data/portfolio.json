@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "title": "Surya Sundar — Full Stack Developer",
+    "description": "Full Stack Developer with 4+ years in Fintech & Banking. React.js, Node.js, TypeScript. Seeking UAE/Dubai opportunities.",
+    "ogImage": "/og-image.png"
+  },
+  "hero": {
+    "firstName": "Surya",
+    "lastName": "Sundar",
+    "title": "Full Stack Developer",
+    "subtitle": "Fintech & Banking  ·  TCS / Lloyds Bank UK",
+    "badge": "Open to Work",
+    "tags": ["React.js", "Node.js", "TypeScript", "Redux", "AWS", "Docker"],
+    "location": "Bengaluru, India",
+    "relocate": "Open to UAE Relocation",
+    "stats": [
+      { "value": "4+", "label": "Yrs Exp" },
+      { "value": "5+", "label": "Live Apps" },
+      { "value": "30%", "label": "Error Cut" },
+      { "value": "2", "label": "Companies" }
+    ]
+  },
+  "contact": {
+    "phone": "+91 75488 87650",
+    "email": "suryacs4646@gmail.com",
+    "linkedin": "https://linkedin.com/in/surya-sundhar",
+    "linkedinLabel": "linkedin.com/in/surya-sundhar"
+  },
+  "uaeBadge": {
+    "flag": "🇦🇪",
+    "title": "Seeking UAE / Dubai Role",
+    "subtitle": "Open to visa sponsorship · Indian passport"
+  },
+  "currentRole": {
+    "label": "Current Role",
+    "title": "Full Stack Developer",
+    "company": "Tata Consultancy Services",
+    "since": "Apr 2025"
+  },
+  "client": {
+    "label": "Client",
+    "flag": "🏦",
+    "name": "Lloyds Bank Group, UK",
+    "project": "Foreign currency exchange platform"
+  },
+  "techStack": {
+    "label": "Tech Stack",
+    "tags": ["React", "Redux", "Node", "TypeScript", "Docker", "Azure"]
+  },
+  "summary": "Full Stack Developer with 4+ years of experience building enterprise-grade web applications for banking, fintech, real estate, and gaming domains. Currently developing a foreign currency exchange platform for Lloyds Bank (UK) at TCS — built from scratch and used daily by bank counter staff across UK branches, reducing manual errors by 30%. Deep expertise in React.js, Node.js, TypeScript, and cloud platforms (AWS, Azure). Eager to bring fintech expertise and enterprise-scale development experience to a Dubai-based technology company.",
+  "skills": [
+    { "category": "Frontend", "items": ["React.js", "TypeScript", "JavaScript (ES6+)", "Redux", "HTML5", "CSS3", "Cancara Design Library"] },
+    { "category": "Backend", "items": ["Node.js", "Express.js", "Nest.js", "REST APIs", "GraphQL", "JWT", "OAuth 2.0", "Bcrypt", "Joi Validation"] },
+    { "category": "Databases", "items": ["PostgreSQL", "MongoDB", "SQL Server", "MySQL", "DynamoDB"] },
+    { "category": "Cloud & DevOps", "items": ["AWS (S3, DynamoDB, Lambda)", "Azure", "Docker", "CI/CD Pipelines", "Azure DevOps"] },
+    { "category": "Tools", "items": ["Git (GitHub/GitLab)", "Swagger", "Redis", "Postman", "Figma", "Agile/Scrum"] }
+  ],
+  "experience": [
+    {
+      "id": "tcs",
+      "company": "Tata Consultancy Services (TCS)",
+      "role": "Full Stack Developer",
+      "period": "April 2025 – Present",
+      "location": "Bengaluru, India",
+      "client": "Lloyds Bank Group, UK",
+      "highlights": [
+        "Built a foreign currency exchange web application from scratch for Lloyds Bank — used daily by bank counter staff across UK branches to process travel money transactions",
+        "Automated currency conversion and denomination selection logic — reduced manual calculation errors by 30%",
+        "Developed multi-step transaction workflows (input → summary → confirmation) using React.js, Redux, and TypeScript",
+        "Containerised deployments using Docker; maintained CI/CD pipelines via Azure DevOps",
+        "Collaborated with cross-functional teams following Agile/Scrum practices and code review processes"
+      ],
+      "stack": ["React.js", "Redux", "Node.js", "TypeScript", "Docker", "Git", "Cancara Design Library"]
+    },
+    {
+      "id": "datatemplate",
+      "company": "Data Template Pvt Ltd",
+      "role": "Full Stack Developer",
+      "period": "February 2022 – February 2025",
+      "location": "Bengaluru, India",
+      "client": null,
+      "highlights": [
+        "Built and enhanced 5+ production applications for international clients across real estate, healthcare, gaming, and education",
+        "Developed REST APIs, managed PostgreSQL/MongoDB databases, and deployed applications on AWS and Azure",
+        "Integrated third-party services including payment gateways, AWS Lambda, and DynamoDB",
+        "Worked directly with international stakeholders to translate business requirements into scalable technical solutions"
+      ],
+      "stack": ["React.js", "Node.js", "Express", "PostgreSQL", "MongoDB", "AWS", "Azure"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "travel-money",
+      "title": "Travel Money Application",
+      "client": "Lloyds Bank",
+      "role": "Full Stack Developer",
+      "domain": "Fintech / Banking",
+      "domainColor": "#00E5A0",
+      "description": "Designed and built a web-based foreign currency exchange application from scratch for Lloyds Bank (UK). Multi-step workflow: currency/denomination selection → summary showing GBP equivalent → transaction confirmation.",
+      "highlights": [
+        "Implemented Redux for centralized state management",
+        "Reduced manual calculation errors by 30% via automated validation",
+        "Responsive, accessible UI using Cancara Design Library",
+        "Containerized with Docker for consistent deployments"
+      ],
+      "stack": ["React.js", "Redux", "Node.js", "TypeScript", "Cancara", "Docker", "Git"]
+    },
+    {
+      "id": "attom-cloud",
+      "title": "ATTOM Cloud",
+      "client": "Real Estate Data Platform",
+      "role": "Full Stack Developer",
+      "domain": "Real Estate",
+      "domainColor": "#4F8EF7",
+      "description": "Built REST APIs and React frontend to deliver nationwide licensed US property data on demand. Integrated SQL Server and Azure cloud services.",
+      "highlights": [
+        "Nationwide US property data delivery on demand",
+        "Sequelize ORM for high-volume data handling",
+        "Azure cloud integration for scalable infrastructure"
+      ],
+      "stack": ["React.js", "Node.js", "Express", "TypeScript", "SQL Server", "Azure", "Sequelize"]
+    },
+    {
+      "id": "gorilla-games",
+      "title": "CRG / Gorilla Games",
+      "client": "Betting & Wallet Platform",
+      "role": "Full Stack Developer",
+      "domain": "Gaming / Fintech",
+      "domainColor": "#F7A94F",
+      "description": "Developed USSD-based betting and digital wallet app with deposit, withdrawal, and admin game-control features.",
+      "highlights": [
+        "USSD-based transaction handling",
+        "Digital wallet with deposit & withdrawal flows",
+        "Admin game-control dashboard"
+      ],
+      "stack": ["Node.js", "Nest.js", "Express", "PostgreSQL", "TypeORM", "JavaScript"]
+    },
+    {
+      "id": "zamtel",
+      "title": "Zamtel WhiteBoardChat",
+      "client": "E-Tutor Platform",
+      "role": "Frontend Developer",
+      "domain": "EdTech",
+      "domainColor": "#B94FF7",
+      "description": "Built virtual classrooms with webinar sessions and attendance tracking; integrated AWS Lambda and DynamoDB.",
+      "highlights": [
+        "Virtual classroom with live webinar sessions",
+        "Attendance tracking system",
+        "AWS Lambda + DynamoDB integration"
+      ],
+      "stack": ["React.js", "JavaScript", "AWS Lambda", "DynamoDB"]
+    },
+    {
+      "id": "fizab",
+      "title": "FizaB",
+      "client": "Social Web Application",
+      "role": "Frontend Developer",
+      "domain": "Social",
+      "domainColor": "#F74F6A",
+      "description": "Developed a social platform from scratch supporting posts, chats, event management, and admin approval workflows.",
+      "highlights": [
+        "Posts, chats, and event management",
+        "Admin approval workflows",
+        "AWS S3 & DynamoDB for media and data"
+      ],
+      "stack": ["React.js", "JavaScript", "AWS S3", "DynamoDB"]
+    }
+  ],
+  "education": {
+    "degree": "Bachelor of Engineering — Computer Science",
+    "institution": "Anna University",
+    "year": "2021"
+  },
+  "additional": {
+    "visa": "Indian passport holder — seeking UAE Employment Visa / Work Permit with employer sponsorship",
+    "languages": ["English (Professional)", "Tamil"],
+    "availability": "Immediately available for interviews (remote); can relocate to UAE upon visa approval",
+    "relocation": "Fully open to employer-supported relocation assistance"
+  }
+}
