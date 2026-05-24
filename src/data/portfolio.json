@@ -8,7 +8,8 @@
     "firstName": "Surya",
     "lastName": "Sundar",
     "title": "Full Stack Developer",
-    "subtitle": "Fintech & Banking  ·  TCS / Lloyds Bank UK",
+    "summary": "Full Stack Developer with 4+ years of experience building scalable enterprise applications in fintech and banking domains. Currently working on a foreign currency exchange platform for Lloyds Bank UK at TCS, improving operational accuracy and reducing production issues in banking workflows.",
+    "subtitle": "| Fintech & Banking (TCS • Lloyds Bank UK)",
     "badge": "Open to Work",
     "tags": ["React.js", "Node.js", "TypeScript", "Redux", "AWS", "Docker"],
     "location": "Bengaluru, India",
@@ -16,7 +17,7 @@
     "stats": [
       { "value": "4+", "label": "Yrs Exp" },
       { "value": "5+", "label": "Live Apps" },
-      { "value": "30%", "label": "Error Cut" },
+      { "value": "30%", "label": "Error Reduction" },
       { "value": "2", "label": "Companies" }
     ]
   },
@@ -28,8 +29,8 @@
   },
   "uaeBadge": {
     "flag": "🇦🇪",
-    "title": "Seeking UAE / Dubai Role",
-    "subtitle": "Open to visa sponsorship · Indian passport"
+    "title": "Open to Global Opportunities",
+    "subtitle": "India • International • Remote • Relocation"
   },
   "currentRole": {
     "label": "Current Role",
@@ -43,9 +44,17 @@
     "name": "Lloyds Bank Group, UK",
     "project": "Foreign currency exchange platform"
   },
-  "techStack": {
-    "label": "Tech Stack",
-    "tags": ["React", "Redux", "Node", "TypeScript", "Docker", "Azure"]
+  "frontEnd": {
+    "label": "Frontend",
+    "tags": ["React.js", "Javascript", "TypeScript", "HTML5", "CSS3", "Redux", "Cancara design library", "Module Federation", "Micro Frontend"]
+  },
+    "backEnd": {
+    "label": "Backend",
+    "tags": ["Node.js", "Express.js","Nest.js", "REST APIs", "GraphQL", "JWT Authentication", "OAuth", "Bcrypt", "CORS", "Slack integration", "Joi Validation"]
+  },
+    "database": {
+    "label": "Database",
+    "tags": ["MongoDB", "PostgreSQL", "MySQL", "SQL Server", "DynamoDB"]
   },
   "summary": "Full Stack Developer with 4+ years of experience building enterprise-grade web applications for banking, fintech, real estate, and gaming domains. Currently developing a foreign currency exchange platform for Lloyds Bank (UK) at TCS — built from scratch and used daily by bank counter staff across UK branches, reducing manual errors by 30%. Deep expertise in React.js, Node.js, TypeScript, and cloud platforms (AWS, Azure). Eager to bring fintech expertise and enterprise-scale development experience to a Dubai-based technology company.",
   "skills": [
@@ -172,7 +181,7 @@
     "year": "2021"
   },
   "additional": {
-    "visa": "Indian passport holder — seeking UAE Employment Visa / Work Permit with employer sponsorship",
+   "visa": "Open to India & International Opportunities • Relocation & Visa Sponsorship Friendly",
     "languages": ["English (Professional)", "Tamil"],
     "availability": "Immediately available for interviews (remote); can relocate to UAE upon visa approval",
     "relocation": "Fully open to employer-supported relocation assistance"

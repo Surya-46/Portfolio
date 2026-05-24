@@ -241,8 +241,8 @@ body::after {
   font-family: var(--font-display);
   font-size: clamp(48px, 6vw, 72px);
   font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.03em;
+  line-height: 1.1;
+  /* letter-spacing: -0.03em; */
   margin-bottom: 14px;
 }
 
@@ -257,6 +257,16 @@ body::after {
   line-height: 1.4;
 }
 
+.hero-desc {
+  font-size: 0.975rem;
+  color: var(--text-secondary);
+  max-width: 540px;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  animation: fade-up 0.6s 0.3s ease both;
+  font-weight: 400;
+}
+
 .hero-tags {
   display: flex;
   flex-wrap: wrap;
@@ -265,6 +275,7 @@ body::after {
 }
 
 .hero-buttons {
+  width: 80%;
   display: flex;
   gap: 10px;
   margin-top: auto;
@@ -330,7 +341,7 @@ body::after {
 }
 
 .stat-value {
-  font-family: var(--font-display);
+  /* font-family: var(--font-display); */
   font-size: 26px;
   font-weight: 800;
   color: var(--accent);
@@ -361,6 +372,10 @@ body::after {
   padding: 18px 20px;
   transition: var(--transition);
   cursor: default;
+}
+
+.skills-list {
+  margin-bottom: 10px;
 }
 
 .info-card:hover {
