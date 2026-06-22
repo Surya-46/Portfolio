@@ -2,6 +2,11 @@ import { useEffect, useRef, useState } from 'react'
 import data from './data/portfolio.json'
 import './styles/main.css'
 
+// Opens Gmail's compose window with Surya's address pre-filled in "To"
+const gmailCompose =
+  `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(data.contact.email)}` +
+  `&su=${encodeURIComponent('Opportunity for Surya Sundar')}`
+
 /* ---------- Hooks & effects ---------- */
 function useScrollProgress() {
   const [progress, setProgress] = useState(0)
@@ -162,7 +167,7 @@ function Hero() {
           </h1>
           <p className="hero-desc">{hero.summary}</p>
           <div className="hero-buttons">
-            <a href={`mailto:${contact.email}`} className="btn-primary">Get In Touch</a>
+            <a href={gmailCompose} target="_blank" rel="noopener noreferrer" className="btn-primary">Get In Touch</a>
             <a href="#projects" className="btn-secondary">View Work <span>→</span></a>
             <a href={contact.resume} download className="btn-ghost" title="Download Resume">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -429,7 +434,7 @@ function Contact() {
       <h2 className="contact-title">Let's build something<br /><span>worth shipping.</span></h2>
       <p className="contact-sub">{additional.visa}</p>
       <div className="contact-links">
-        <a href={`mailto:${contact.email}`} className="contact-link">
+        <a href={gmailCompose} target="_blank" rel="noopener noreferrer" className="contact-link">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
             <polyline points="22,6 12,13 2,6" />
