@@ -841,22 +841,53 @@ body::after {
   transform: translateY(-3px);
 }
 
-.skill-card-num {
+.skill-card::before {
+  content: '';
   position: absolute;
-  top: 20px;
-  right: 24px;
-  font-family: var(--font-display);
-  font-size: 30px;
-  font-weight: 500;
-  color: var(--line-strong);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-gold);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+
+.skill-card:hover::before { transform: scaleX(1); }
+
+.skill-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.skill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gradient-gold);
+  flex-shrink: 0;
 }
 
 .skill-category {
   font-family: var(--font-display);
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 600;
-  color: var(--gold);
-  margin-bottom: 16px;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.skill-count {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-faint);
+  letter-spacing: 0.05em;
 }
 
 .skill-tags {

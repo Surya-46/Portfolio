@@ -266,8 +266,11 @@ function Skills() {
       <div className="skills-grid">
         {data.skills.map((s, i) => (
           <div key={s.category} className="skill-card" data-reveal data-spotlight style={{ transitionDelay: `${i * 60}ms` }}>
-            <div className="skill-card-num">{String(i + 1).padStart(2, '0')}</div>
-            <div className="skill-category">{s.category}</div>
+            <div className="skill-card-head">
+              <span className="skill-dot" />
+              <span className="skill-category">{s.category}</span>
+              <span className="skill-count">{String(s.items.length).padStart(2, '0')}</span>
+            </div>
             <div className="skill-tags">
               {s.items.map(item => <span key={item} className="tag">{item}</span>)}
             </div>
