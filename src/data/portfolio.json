@@ -14,7 +14,7 @@
     "badge": "Open to Work",
     "tags": ["React.js", "Node.js", "TypeScript", "Redux", "AWS", "Docker"],
     "location": "Bengaluru, India",
-    "relocate": "Open to UAE Relocation",
+    "relocate": "Open to Global & Indian Opportunities",
     "stats": [
       { "value": "4+", "label": "Years Experience" },
       { "value": "7+", "label": "Production Apps" },
@@ -25,8 +25,8 @@
   "contact": {
     "phone": "+91 75488 87650",
     "email": "suryacs4646@gmail.com",
-    "linkedin": "https://linkedin.com/in/surya-sundhar",
-    "linkedinLabel": "linkedin.com/in/surya-sundhar",
+    "linkedin": "https://www.linkedin.com/in/surya-sundar-383ab61ba",
+    "linkedinLabel": "linkedin.com/in/surya-sundar",
     "github": "https://github.com/surya-sundhar",
     "githubLabel": "github.com/surya-sundhar",
     "resume": "/resume.pdf"
@@ -60,7 +60,22 @@
     "label": "Database",
     "tags": ["MongoDB", "PostgreSQL", "MySQL", "SQL Server", "DynamoDB"]
   },
-  "summary": "Full Stack Developer with 4+ years of experience building enterprise-grade web applications for banking, fintech, real estate, and gaming domains. Currently developing a foreign currency exchange platform for Lloyds Bank (UK) at TCS — built from scratch and used daily by bank counter staff across UK branches, reducing manual errors by 30%. Deep expertise in React.js, Node.js, TypeScript, and cloud platforms (AWS, Azure). Eager to bring fintech expertise and enterprise-scale development experience to a Dubai-based technology company.",
+  "summary": "Full Stack Developer with 4+ years of experience building enterprise-grade web applications for banking, fintech, real estate, and gaming domains. Currently developing a foreign currency exchange platform for Lloyds Bank (UK) at TCS — built from scratch and used daily by bank counter staff across UK branches, reducing manual errors by 30%. Deep expertise in React.js, Node.js, TypeScript, and cloud platforms (AWS, Azure). Eager to bring fintech expertise and enterprise-scale development experience to a forward-thinking global technology company.",
+  "impact": [
+    { "value": "4+", "label": "Years building production software", "icon": "⏳" },
+    { "value": "7+", "label": "Apps shipped to real users", "icon": "🚀" },
+    { "value": "5", "label": "Industry domains delivered", "icon": "🌐" },
+    { "value": "30%", "label": "Manual errors eliminated", "icon": "📉" },
+    { "value": "25+", "label": "Technologies in the toolbox", "icon": "🛠" },
+    { "value": "UK", "label": "Bank now running my code daily", "icon": "🏦" }
+  ],
+  "domains": [
+    { "name": "Fintech & Banking", "icon": "🏦", "color": "#00E5A0" },
+    { "name": "Real Estate Data", "icon": "🏠", "color": "#4F8EF7" },
+    { "name": "Gaming & Wallets", "icon": "🎮", "color": "#F7A94F" },
+    { "name": "EdTech", "icon": "🎓", "color": "#B94FF7" },
+    { "name": "Social Platforms", "icon": "💬", "color": "#F74F6A" }
+  ],
   "valueProps": [
     {
       "icon": "🏦",
@@ -82,6 +97,14 @@
       "title": "Stakeholder-ready",
       "description": "Direct experience working with international clients and cross-functional teams under Agile/Scrum — I communicate as well as I code."
     }
+  ],
+  "coreStack": [
+    { "name": "React.js", "abbr": "Re", "level": 95, "note": "Primary frontend", "color": "#61DAFB" },
+    { "name": "TypeScript", "abbr": "TS", "level": 92, "note": "Type-safe code", "color": "#3178C6" },
+    { "name": "Node.js", "abbr": "No", "level": 90, "note": "APIs & services", "color": "#83CD29" },
+    { "name": "Redux", "abbr": "Rx", "level": 90, "note": "State management", "color": "#764ABC" },
+    { "name": "Micro Frontend", "abbr": "MF", "level": 85, "note": "Module Federation", "color": "#4FD1C5" },
+    { "name": "Cloud (AWS/Azure)", "abbr": "☁", "level": 82, "note": "Deploy & scale", "color": "#6F9BFF" }
   ],
   "skills": [
     { "category": "Frontend", "items": ["React.js", "TypeScript", "JavaScript (ES6+)", "Redux", "HTML5", "CSS3", "Cancara Design Library"] },
