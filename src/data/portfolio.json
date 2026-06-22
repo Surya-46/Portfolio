@@ -1,31 +1,35 @@
 {
   "meta": {
-    "title": "Surya Sundar — Full Stack Developer",
-    "description": "Full Stack Developer with 4+ years in Fintech & Banking. React.js, Node.js, TypeScript. Seeking UAE/Dubai opportunities.",
+    "title": "Surya Sundar — Full Stack Developer | Fintech & Banking",
+    "description": "Full Stack Developer with 4+ years in Fintech & Banking. React.js, Node.js, TypeScript. Building production systems for Lloyds Bank UK. Open to global & UAE opportunities.",
     "ogImage": "/og-image.png"
   },
   "hero": {
+    "photo": "/profile.jpg",
     "firstName": "Surya",
     "lastName": "Sundar",
     "title": "Full Stack Developer",
-    "summary": "Full Stack Developer with 4+ years of experience building scalable enterprise applications in fintech and banking domains. Currently working on a foreign currency exchange platform for Lloyds Bank UK at TCS, improving operational accuracy and reducing production issues in banking workflows.",
-    "subtitle": "| Fintech & Banking (TCS • Lloyds Bank UK)",
+    "summary": "I build production banking software used daily by real people — not demos. 4+ years turning fintech & enterprise requirements into reliable, scalable web applications.",
+    "subtitle": "Fintech & Banking Engineer · TCS × Lloyds Bank UK",
     "badge": "Open to Work",
     "tags": ["React.js", "Node.js", "TypeScript", "Redux", "AWS", "Docker"],
     "location": "Bengaluru, India",
-    "relocate": "Open to UAE Relocation",
+    "relocate": "Open to Global & Indian Opportunities",
     "stats": [
-      { "value": "4+", "label": "Yrs Exp" },
-      { "value": "5+", "label": "Live Apps" },
-      { "value": "30%", "label": "Error Reduction" },
+      { "value": "4+", "label": "Years Experience" },
+      { "value": "7+", "label": "Production Apps" },
+      { "value": "30%", "label": "Errors Reduced" },
       { "value": "2", "label": "Companies" }
     ]
   },
   "contact": {
     "phone": "+91 75488 87650",
     "email": "suryacs4646@gmail.com",
-    "linkedin": "https://linkedin.com/in/surya-sundhar",
-    "linkedinLabel": "linkedin.com/in/surya-sundhar"
+    "linkedin": "https://www.linkedin.com/in/surya-sundar-383ab61ba",
+    "linkedinLabel": "linkedin.com/in/surya-sundar",
+    "github": "https://github.com/surya-sundhar",
+    "githubLabel": "github.com/surya-sundhar",
+    "resume": "/resume/Surya-Sundar-Resume.docx"
   },
   "uaeBadge": {
     "flag": "🇦🇪",
@@ -48,15 +52,60 @@
     "label": "Frontend",
     "tags": ["React.js", "Javascript", "TypeScript", "HTML5", "CSS3", "Redux", "Cancara design library", "Module Federation", "Micro Frontend"]
   },
-    "backEnd": {
+  "backEnd": {
     "label": "Backend",
-    "tags": ["Node.js", "Express.js","Nest.js", "REST APIs", "GraphQL", "JWT Authentication", "OAuth", "Bcrypt", "CORS", "Slack integration", "Joi Validation"]
+    "tags": ["Node.js", "Express.js", "Nest.js", "REST APIs", "GraphQL", "JWT Authentication", "OAuth", "Bcrypt", "CORS", "Slack integration", "Joi Validation"]
   },
-    "database": {
+  "database": {
     "label": "Database",
     "tags": ["MongoDB", "PostgreSQL", "MySQL", "SQL Server", "DynamoDB"]
   },
-  "summary": "Full Stack Developer with 4+ years of experience building enterprise-grade web applications for banking, fintech, real estate, and gaming domains. Currently developing a foreign currency exchange platform for Lloyds Bank (UK) at TCS — built from scratch and used daily by bank counter staff across UK branches, reducing manual errors by 30%. Deep expertise in React.js, Node.js, TypeScript, and cloud platforms (AWS, Azure). Eager to bring fintech expertise and enterprise-scale development experience to a Dubai-based technology company.",
+  "summary": "Full Stack Developer with 4+ years of experience building enterprise-grade web applications for banking, fintech, real estate, and gaming domains. Currently developing a foreign currency exchange platform for Lloyds Bank (UK) at TCS — built from scratch and used daily by bank counter staff across UK branches, reducing manual errors by 30%. Deep expertise in React.js, Node.js, TypeScript, and cloud platforms (AWS, Azure). Eager to bring fintech expertise and enterprise-scale development experience to a forward-thinking global technology company.",
+  "impact": [
+    { "value": "4+", "label": "Years building production software", "icon": "⏳" },
+    { "value": "7+", "label": "Apps shipped to real users", "icon": "🚀" },
+    { "value": "5", "label": "Industry domains delivered", "icon": "🌐" },
+    { "value": "30%", "label": "Manual errors eliminated", "icon": "📉" },
+    { "value": "25+", "label": "Technologies in the toolbox", "icon": "🛠" },
+    { "value": "UK", "label": "Bank now running my code daily", "icon": "🏦" }
+  ],
+  "domains": [
+    { "name": "Fintech & Banking", "icon": "🏦", "color": "#00E5A0" },
+    { "name": "Real Estate Data", "icon": "🏠", "color": "#4F8EF7" },
+    { "name": "Gaming & Wallets", "icon": "🎮", "color": "#F7A94F" },
+    { "name": "EdTech", "icon": "🎓", "color": "#B94FF7" },
+    { "name": "Social Platforms", "icon": "💬", "color": "#F74F6A" }
+  ],
+  "valueProps": [
+    {
+      "icon": "🏦",
+      "title": "Banking-grade reliability",
+      "description": "I've shipped a currency exchange platform that bank staff rely on every day across UK branches — code that cannot afford to fail."
+    },
+    {
+      "icon": "⚡",
+      "title": "Fast, measurable impact",
+      "description": "Automated validation logic that cut manual calculation errors by 30% — I optimize for outcomes, not just shipped code."
+    },
+    {
+      "icon": "🌍",
+      "title": "Cross-domain versatility",
+      "description": "Banking, real estate, gaming, and EdTech — I adapt quickly to new domains and ship production-ready features fast."
+    },
+    {
+      "icon": "🤝",
+      "title": "Stakeholder-ready",
+      "description": "Direct experience working with international clients and cross-functional teams under Agile/Scrum — I communicate as well as I code."
+    }
+  ],
+  "coreStack": [
+    { "name": "React.js", "abbr": "Re", "level": 95, "note": "Primary frontend", "color": "#61DAFB" },
+    { "name": "TypeScript", "abbr": "TS", "level": 92, "note": "Type-safe code", "color": "#3178C6" },
+    { "name": "Node.js", "abbr": "No", "level": 90, "note": "APIs & services", "color": "#83CD29" },
+    { "name": "Redux", "abbr": "Rx", "level": 90, "note": "State management", "color": "#764ABC" },
+    { "name": "Micro Frontend", "abbr": "MF", "level": 85, "note": "Module Federation", "color": "#4FD1C5" },
+    { "name": "Cloud (AWS/Azure)", "abbr": "☁", "level": 82, "note": "Deploy & scale", "color": "#6F9BFF" }
+  ],
   "skills": [
     { "category": "Frontend", "items": ["React.js", "TypeScript", "JavaScript (ES6+)", "Redux", "HTML5", "CSS3", "Cancara Design Library"] },
     { "category": "Backend", "items": ["Node.js", "Express.js", "Nest.js", "REST APIs", "GraphQL", "JWT", "OAuth 2.0", "Bcrypt", "Joi Validation"] },
@@ -105,6 +154,7 @@
       "role": "Full Stack Developer",
       "domain": "Fintech / Banking",
       "domainColor": "#00E5A0",
+      "featured": true,
       "description": "Designed and built a web-based foreign currency exchange application from scratch for Lloyds Bank (UK). Multi-step workflow: currency/denomination selection → summary showing GBP equivalent → transaction confirmation.",
       "highlights": [
         "Implemented Redux for centralized state management",
@@ -121,6 +171,7 @@
       "role": "Full Stack Developer",
       "domain": "Real Estate",
       "domainColor": "#4F8EF7",
+      "featured": true,
       "description": "Built REST APIs and React frontend to deliver nationwide licensed US property data on demand. Integrated SQL Server and Azure cloud services.",
       "highlights": [
         "Nationwide US property data delivery on demand",
@@ -136,6 +187,7 @@
       "role": "Full Stack Developer",
       "domain": "Gaming / Fintech",
       "domainColor": "#F7A94F",
+      "featured": false,
       "description": "Developed USSD-based betting and digital wallet app with deposit, withdrawal, and admin game-control features.",
       "highlights": [
         "USSD-based transaction handling",
@@ -151,6 +203,7 @@
       "role": "Frontend Developer",
       "domain": "EdTech",
       "domainColor": "#B94FF7",
+      "featured": false,
       "description": "Built virtual classrooms with webinar sessions and attendance tracking; integrated AWS Lambda and DynamoDB.",
       "highlights": [
         "Virtual classroom with live webinar sessions",
@@ -166,6 +219,7 @@
       "role": "Frontend Developer",
       "domain": "Social",
       "domainColor": "#F74F6A",
+      "featured": false,
       "description": "Developed a social platform from scratch supporting posts, chats, event management, and admin approval workflows.",
       "highlights": [
         "Posts, chats, and event management",
@@ -181,7 +235,7 @@
     "year": "2021"
   },
   "additional": {
-   "visa": "Open to India & International Opportunities • Relocation & Visa Sponsorship Friendly",
+    "visa": "Open to India & International Opportunities • Relocation & Visa Sponsorship Friendly",
     "languages": ["English (Professional)", "Tamil"],
     "availability": "Immediately available for interviews (remote); can relocate to UAE upon visa approval",
     "relocation": "Fully open to employer-supported relocation assistance"
